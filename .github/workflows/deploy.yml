@@ -56,3 +56,9 @@ jobs:
         - name: terraform plan status
           if: steps.plan.outcome == 'failure'
           run: exit 1
+
+          # Task 1 apply tf, only when pushed on main
+          # Task 2 configure aws creds
+          # Task 3 get kubeconfig
+          # Task 4 apply ingress controller
+          # Remeber to Use id and steps.id.outcome 
