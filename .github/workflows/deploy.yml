@@ -59,7 +59,7 @@ jobs:
           
         - name: terraform destroy
           if: steps.plan.outcome == 'success'
-          run: terraform destroy planfile
+          run: terraform destroy
 
           # Task 1 apply tf, only when pushed on main
           # Task 2 configure aws creds
