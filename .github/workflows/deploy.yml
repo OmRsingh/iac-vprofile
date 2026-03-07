@@ -59,5 +59,4 @@ jobs:
           run: exit 1
 
         - name: terraform destroy
-          if: steps.status.outcome == 'success'
-          run: terraform destroy
+          run: terraform destroy -auto-approve -input=false
