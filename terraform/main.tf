@@ -12,8 +12,3 @@ data "aws_availability_zones" "available" {}
 locals {
   cluster_name = var.clusterName
 }
-<<<<<<< HEAD
-=======
-
-#
->>>>>>> abd3c41f35c24fc5d49843792d03453633f582d0
