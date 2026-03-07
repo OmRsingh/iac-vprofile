@@ -56,7 +56,7 @@ jobs:
         - name: terraform plan status
           if: steps.plan.outcome == 'failure'
           run: exit 1
-          
+
         - name: terraform apply
           id: apply
           if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -93,7 +93,7 @@ jobs:
             # It proves that 'kubectl' is just a wrapper triggering 'aws eks get-token'
             grep -A 10 "exec:" ~/.kube/config || echo "Exec section not found"
             echo "------------------------"
-
+          
           # Task 1 apply tf, only when pushed on main
           # Task 2 configure aws creds
           # Task 3 get kubeconfig
